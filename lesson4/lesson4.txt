@@ -1,0 +1,39 @@
+1)Представление таблицы : отдел,количество сотрудников в отделах, сколько всего денег получает отдел.
+
+USE `employees`;
+CREATE  OR REPLACE VIEW `view_number_of_employees` AS
+SELECT d.dept_name, count(s.emp_no) AS number_of_employees,  SUM(s.salary) AS summ_salary_dept
+FROM employees.departments AS d
+JOIN employees.dept_emp AS de ON d.dept_no = de.dept_no
+JOIN employees.salaries AS s ON de.emp_no = s. emp_no
+where s.to_date >='9999-01-01'
+GROUP BY d.dept_name;;
+
+2)Создать функцию, которая найдет менеджера(№) по имени и фамилии.
+
+USE `employees`;
+DROP function IF EXISTS `getManager`;
+
+DELIMITER $$
+USE `employees`$$
+CREATE FUNCTION employees.getManager (first_name VARCHAR(16), last_name VARCHAR(16))
+RETURNS INT
+reads sql data
+BEGIN
+RETURN (SELECT e.emp_no FROM dept_manager AS dm JOIN employees AS e ON dm.emp_no = e.emp_no
+WHERE e.first_name = first_name AND e.last_name = last_name);
+END$$
+
+DELIMITER ;
+
+3. Создать триггер, который при добавлении нового сотрудника будет выплачивать ему вступительный бонус, занося запись об этом в таблицу salary.
+
+DROP TRIGGER IF EXISTS `employees`.`AFTER_INSERT_employees`;
+
+DELIMITER $$
+USE `employees`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `employees`.`AFTER_INSERT_employees` AFTER INSERT ON `employees` FOR EACH ROW
+BEGIN
+INSERT INTO employees.salaries (emp_no, salary, from_date, to_date) VALUES (NEW.emp_no, 20000, NEW.hire_date, NEW.hire_date);
+END$$
+DELIMITER ;
