@@ -1,0 +1,61 @@
+
+USE social_network;
+
+Задача 1.
+●id пользователя:
+SELECT id 
+FROM users 
+WHERE user_name = 'E';
+
+●имя:
+SELECT user_name 
+FROM users 
+WHERE id = 5;
+
+●лайков получено:
+SELECT whom_like, count(*) AS likes_count
+FROM likes
+WHERE type = 'user'
+GROUP BY whom_like;
+
+●лайков поставлено:
+SELECT user_like, count(*) AS likes_count
+FROM likes
+WHERE type = 'user'
+GROUP BY user_like;
+
+●взаимные лайки.
+SELECT l1.user_like, l1.whom_like 
+FROM likes l1 
+JOIN likes l2 ON l1.user_like = l2.whom_like AND l2.user_like = l1.whom_like
+WHERE l1.type = 'user' AND l2.type = 'user';
+
+
+Задача 2.
+SELECT userA.user_like 
+FROM (SELECT * FROM likes l1 WHERE l1.whom_like = 'A' AND l1.type = 'user') AS userA
+JOIN (SELECT * FROM likes l2 WHERE l2.whom_like = 'B' AND l2.type = 'user') AS userB on userA.user_like = userB.user_like
+WHERE userA.user_like NOT IN(SELECT l3.user_like FROM likes l3 WHERE l3.whom_like = 'C' AND l3.type = 'user');
+
+
+Задача 3.
+●пользователь не может дважды лайкнуть одну и ту же сущность; первичный ключ таблицы likes состоит из 3х колонок:user_like,whom_like, type.  
+●пользователь имеет право отозвать лайк:
+DELETE FROM likes
+WHERE user_like = 'A' AND whom_like = 'foto1' AND type = 'foto';//удаление строки,где пользователь А поставил лайк foto1
+
+●необходимо иметь возможность считать число полученных сущностью лайков и выводить список пользователей, поставивших лайки;
+SELECT whom_like AS essence, count(*)
+FROM likes
+WHERE type = 'foto' AND whom_like = 'foto1';//foto1 получило count лайков
+
+SELECT user_like AS user, whom_like AS essence
+FROM likes
+WHERE type = 'user' AND whom_like = 'A';//список пользователей
+
+●в будущем могут появиться новые виды сущностей, которые можно лайкать. В таблицу likes в столбце type тип данных ENUM можно добавить новые сущности
+
+
+
+
+
