@@ -1,0 +1,445 @@
+> db.docs.find({'address.building':{$in:["705"]}})
+{ "_id" : ObjectId("5efdb0c2af406f74a5a09c55"), "address" : { "building" : "705", "coord" : [ -73.9653967, 40.6064339 ], "street" : "Kings Highway", "zipcode" : "11223" }, "borough" : "Brooklyn", "cuisine" : "Jewish/Kosher", "grades" : [ { "date" : ISODate("2014-11-10T00:00:00Z"), "grade" : "A", "score" : 11 }, { "date" : ISODate("2013-10-10T00:00:00Z"), "grade" : "A", "score" : 13 }, { "date" : ISODate("2012-10-04T00:00:00Z"), "grade" : "A", "score" : 7 }, { "date" : ISODate("2012-05-21T00:00:00Z"), "grade" : "A", "score" : 9 }, { "date" : ISODate("2011-12-30T00:00:00Z"), "grade" : "B", "score" : 19 } ], "name" : "Seuda Foods", "restaurant_id" : "40360045" }
+{ "_id" : ObjectId("5efdb0c3af406f74a5a0bbf3"), "address" : { "building" : "705", "coord" : [ -73.9604322, 40.57810690000001 ], "street" : "Brighton Beach Avenue", "zipcode" : "11235" }, "borough" : "Brooklyn", "cuisine" : "Pizza/Italian", "grades" : [ { "date" : ISODate("2013-12-21T00:00:00Z"), "grade" : "A", "score" : 9 }, { "date" : ISODate("2012-10-09T00:00:00Z"), "grade" : "A", "score" : 11 }, { "date" : ISODate("2012-05-10T00:00:00Z"), "grade" : "B", "score" : 27 } ], "name" : "Royal Pizzeria", "restaurant_id" : "41309676" }
+{ "_id" : ObjectId("5efdb0c3af406f74a5a0bc13"), "address" : { "building" : "705", "coord" : [ -73.9888232, 40.7589911 ], "street" : "8 Avenue", "zipcode" : "10036" }, "borough" : "Manhattan", "cuisine" : "American ", "grades" : [ { "date" : ISODate("2014-03-10T00:00:00Z"), "grade" : "A", "score" : 12 }, { "date" : ISODate("2013-08-30T00:00:00Z"), "grade" : "A", "score" : 12 }, { "date" : ISODate("2013-03-25T00:00:00Z"), "grade" : "A", "score" : 11 }, { "date" : ISODate("2012-08-03T00:00:00Z"), "grade" : "B", "score" : 14 }, { "date" : ISODate("2012-01-10T00:00:00Z"), "grade" : "A", "score" : 12 } ], "name" : "Subway/Arthur Treacher'S/Nathan'S/Church'S Fried Chicken", "restaurant_id" : "41311372" }
+{ "_id" : ObjectId("5efdb0c3af406f74a5a0c00f"), "address" : { "building" : "705", "coord" : [ -74.0115805, 40.6367354 ], "street" : "60 Street", "zipcode" : "11220" }, "borough" : "Brooklyn", "cuisine" : "Chinese", "grades" : [ { "date" : ISODate("2014-06-16T00:00:00Z"), "grade" : "A", "score" : 2 }, { "date" : ISODate("2014-01-28T00:00:00Z"), "grade" : "A", "score" : 8 }, { "date" : ISODate("2013-08-15T00:00:00Z"), "grade" : "A", "score" : 2 }, { "date" : ISODate("2013-03-04T00:00:00Z"), "grade" : "A", "score" : 7 }, { "date" : ISODate("2012-07-10T00:00:00Z"), "grade" : "A", "score" : 13 }, { "date" : ISODate("2011-12-23T00:00:00Z"), "grade" : "B", "score" : 14 } ], "name" : "Wei Mei Xian", "restaurant_id" : "41376958" }
+{ "_id" : ObjectId("5efdb0c3af406f74a5a0c11f"), "address" : { "building" : "705", "coord" : [ -73.9888232, 40.7589911 ], "street" : "8 Avenue", "zipcode" : "10036" }, "borough" : "Manhattan", "cuisine" : "Pizza", "grades" : [ { "date" : ISODate("2014-11-21T00:00:00Z"), "grade" : "A", "score" : 10 }, { "date" : ISODate("2014-06-24T00:00:00Z"), "grade" : "A", "score" : 3 }, { "date" : ISODate("2013-11-23T00:00:00Z"), "grade" : "A", "score" : 8 }, { "date" : ISODate("2013-04-09T00:00:00Z"), "grade" : "A", "score" : 12 }, { "date" : ISODate("2012-10-23T00:00:00Z"), "grade" : "B", "score" : 14 }, { "date" : ISODate("2012-05-11T00:00:00Z"), "grade" : "A", "score" : 13 }, { "date" : ISODate("2011-12-16T00:00:00Z"), "grade" : "B", "score" : 17 } ], "name" : "Mama'S Pizza Cafe", "restaurant_id" : "41388576" }
+{ "_id" : ObjectId("5efdb0c3af406f74a5a0cd44"), "address" : { "building" : "705", "coord" : [ -73.9771903, 40.6876383 ], "street" : "Fulton Street", "zipcode" : "11217" }, "borough" : "Brooklyn", "cuisine" : "Chinese", "grades" : [ { "date" : ISODate("2013-12-26T00:00:00Z"), "grade" : "A", "score" : 7 }, { "date" : ISODate("2013-06-11T00:00:00Z"), "grade" : "A", "score" : 12 }, { "date" : ISODate("2012-06-07T00:00:00Z"), "grade" : "A", "score" : 12 }, { "date" : ISODate("2012-01-30T00:00:00Z"), "grade" : "A", "score" : 3 } ], "name" : "No. 1 Chinese Restaurant", "restaurant_id" : "41543375" }
+{ "_id" : ObjectId("5efdb0c3af406f74a5a0d193"), "address" : { "building" : "705", "coord" : [ -73.9161301, 40.8200851 ], "street" : "Melrose Avenue", "zipcode" : "10455" }, "borough" : "Bronx", "cuisine" : "Italian", "grades" : [ { "date" : ISODate("2014-07-22T00:00:00Z"), "grade" : "A", "score" : 9 }, { "date" : ISODate("2013-07-06T00:00:00Z"), "grade" : "A", "score" : 7 }, { "date" : ISODate("2012-07-12T00:00:00Z"), "grade" : "A", "score" : 4 }, { "date" : ISODate("2011-08-03T00:00:00Z"), "grade" : "A", "score" : 2 } ], "name" : "Landin Macaroni And Cheese", "restaurant_id" : "41586806" }
+{ "_id" : ObjectId("5efdb0c4af406f74a5a0f555"), "address" : { "building" : "705", "coord" : [ -73.86144949999999, 40.8856332 ], "street" : "East  222 Street", "zipcode" : "10467" }, "borough" : "Bronx", "cuisine" : "Caribbean", "grades" : [ { "date" : ISODate("2014-10-08T00:00:00Z"), "grade" : "B", "score" : 14 } ], "name" : "Chix Express", "restaurant_id" : "50011404" }
+
+-----------------------------------------------------------------------------------------------------
+db.docs.find({'address.zipcode':"11223"}).limit(1).pretty()
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09c55"),
+	"address" : {
+		"building" : "705",
+		"coord" : [
+			-73.9653967,
+			40.6064339
+		],
+		"street" : "Kings Highway",
+		"zipcode" : "11223"
+	},
+	"borough" : "Brooklyn",
+	"cuisine" : "Jewish/Kosher",
+	"grades" : [
+		{
+			"date" : ISODate("2014-11-10T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		},
+		{
+			"date" : ISODate("2013-10-10T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2012-10-04T00:00:00Z"),
+			"grade" : "A",
+			"score" : 7
+		},
+		{
+			"date" : ISODate("2012-05-21T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2011-12-30T00:00:00Z"),
+			"grade" : "B",
+			"score" : 19
+		}
+	],
+	"name" : "Seuda Foods",
+	"restaurant_id" : "40360045"
+}
+------------------------------------------------------------------------------------------------------------
+> db.docs.find({'address.zipcode': {$lt: "10019"}}).limit(5).pretty()
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09c59"),
+	"address" : {
+		"building" : "759",
+		"coord" : [
+			-73.9925306,
+			40.7309346
+		],
+		"street" : "Broadway",
+		"zipcode" : "10003"
+	},
+	"borough" : "Manhattan",
+	"cuisine" : "Delicatessen",
+	"grades" : [
+		{
+			"date" : ISODate("2014-01-21T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		},
+		{
+			"date" : ISODate("2013-01-04T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		},
+		{
+			"date" : ISODate("2012-06-07T00:00:00Z"),
+			"grade" : "A",
+			"score" : 6
+		},
+		{
+			"date" : ISODate("2012-01-17T00:00:00Z"),
+			"grade" : "A",
+			"score" : 8
+		}
+	],
+	"name" : "Bully'S Deli",
+	"restaurant_id" : "40361708"
+}
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09c5b"),
+	"address" : {
+		"building" : "18",
+		"coord" : [
+			-73.996984,
+			40.72589
+		],
+		"street" : "West Houston Street",
+		"zipcode" : "10012"
+	},
+	"borough" : "Manhattan",
+	"cuisine" : "American ",
+	"grades" : [
+		{
+			"date" : ISODate("2014-04-03T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2013-04-05T00:00:00Z"),
+			"grade" : "A",
+			"score" : 4
+		},
+		{
+			"date" : ISODate("2012-03-21T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2011-04-27T00:00:00Z"),
+			"grade" : "A",
+			"score" : 5
+		}
+	],
+	"name" : "Angelika Film Center",
+	"restaurant_id" : "40362274"
+}
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09c5f"),
+	"address" : {
+		"building" : "60",
+		"coord" : [
+			-74.0085357,
+			40.70620539999999
+		],
+		"street" : "Wall Street",
+		"zipcode" : "10005"
+	},
+	"borough" : "Manhattan",
+	"cuisine" : "Turkish",
+	"grades" : [
+		{
+			"date" : ISODate("2014-09-26T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2013-09-18T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2012-09-21T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2012-05-09T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		}
+	],
+	"name" : "The Country Cafe",
+	"restaurant_id" : "40362715"
+}
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09c62"),
+	"address" : {
+		"building" : "107",
+		"coord" : [
+			-74.00920839999999,
+			40.7132925
+		],
+		"street" : "Church Street",
+		"zipcode" : "10007"
+	},
+	"borough" : "Manhattan",
+	"cuisine" : "American ",
+	"grades" : [
+		{
+			"date" : ISODate("2014-07-18T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		},
+		{
+			"date" : ISODate("2014-02-26T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2013-08-26T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2013-02-01T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		},
+		{
+			"date" : ISODate("2012-01-17T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2011-10-18T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		}
+	],
+	"name" : "Downtown Deli",
+	"restaurant_id" : "40363021"
+}
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09c65"),
+	"address" : {
+		"building" : "120",
+		"coord" : [
+			-73.9998042,
+			40.7251256
+		],
+		"street" : "Prince Street",
+		"zipcode" : "10012"
+	},
+	"borough" : "Manhattan",
+	"cuisine" : "Bakery",
+	"grades" : [
+		{
+			"date" : ISODate("2014-10-17T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		},
+		{
+			"date" : ISODate("2013-09-18T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2013-04-30T00:00:00Z"),
+			"grade" : "A",
+			"score" : 7
+		},
+		{
+			"date" : ISODate("2012-04-20T00:00:00Z"),
+			"grade" : "A",
+			"score" : 7
+		},
+		{
+			"date" : ISODate("2011-12-19T00:00:00Z"),
+			"grade" : "A",
+			"score" : 3
+		}
+	],
+	"name" : "Olive'S",
+	"restaurant_id" : "40363151"
+}
+------------------------------------------------------------------------------------------------------------------------------------
+db.docs.find({'borough': "Queens"}).limit(1).pretty()
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09c45"),
+	"address" : {
+		"building" : "97-22",
+		"coord" : [
+			-73.8601152,
+			40.7311739
+		],
+		"street" : "63 Road",
+		"zipcode" : "11374"
+	},
+	"borough" : "Queens",
+	"cuisine" : "Jewish/Kosher",
+	"grades" : [
+		{
+			"date" : ISODate("2014-11-24T00:00:00Z"),
+			"grade" : "Z",
+			"score" : 20
+		},
+		{
+			"date" : ISODate("2013-01-17T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2012-08-02T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2011-12-15T00:00:00Z"),
+			"grade" : "B",
+			"score" : 25
+		}
+	],
+	"name" : "Tov Kosher Kitchen",
+	"restaurant_id" : "40356068"
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+db.docs.find({'restaurant_id': {$gte : "4036767"} }).limit(3).pretty()
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09d0b"),
+	"address" : {
+		"building" : "4933",
+		"coord" : [
+			-73.9215284,
+			40.8678204
+		],
+		"street" : "Broadway",
+		"zipcode" : "10034"
+	},
+	"borough" : "Manhattan",
+	"cuisine" : "American ",
+	"grades" : [
+		{
+			"date" : ISODate("2014-07-24T00:00:00Z"),
+			"grade" : "A",
+			"score" : 13
+		},
+		{
+			"date" : ISODate("2013-07-15T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		},
+		{
+			"date" : ISODate("2013-02-20T00:00:00Z"),
+			"grade" : "A",
+			"score" : 6
+		},
+		{
+			"date" : ISODate("2012-08-31T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		},
+		{
+			"date" : ISODate("2012-04-02T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2011-11-16T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		}
+	],
+	"name" : "Capitol Restaurant",
+	"restaurant_id" : "40367677"
+}
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09d0c"),
+	"address" : {
+		"building" : "48",
+		"coord" : [
+			-73.977035,
+			40.762307
+		],
+		"street" : "West   55 Street",
+		"zipcode" : "10019"
+	},
+	"borough" : "Manhattan",
+	"cuisine" : "French",
+	"grades" : [
+		{
+			"date" : ISODate("2014-05-15T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2013-12-16T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		},
+		{
+			"date" : ISODate("2013-05-21T00:00:00Z"),
+			"grade" : "A",
+			"score" : 9
+		},
+		{
+			"date" : ISODate("2012-05-07T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		},
+		{
+			"date" : ISODate("2011-12-12T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		},
+		{
+			"date" : ISODate("2011-07-25T00:00:00Z"),
+			"grade" : "A",
+			"score" : 5
+		}
+	],
+	"name" : "La Bonne Soupe Bistro",
+	"restaurant_id" : "40367715"
+}
+{
+	"_id" : ObjectId("5efdb0c2af406f74a5a09d0d"),
+	"address" : {
+		"building" : "16103",
+		"coord" : [
+			-73.83856999999999,
+			40.655669
+		],
+		"street" : "Crossbay Boulevard",
+		"zipcode" : "11414"
+	},
+	"borough" : "Queens",
+	"cuisine" : "Seafood",
+	"grades" : [
+		{
+			"date" : ISODate("2014-10-29T00:00:00Z"),
+			"grade" : "B",
+			"score" : 16
+		},
+		{
+			"date" : ISODate("2014-03-26T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		},
+		{
+			"date" : ISODate("2013-08-22T00:00:00Z"),
+			"grade" : "A",
+			"score" : 11
+		},
+		{
+			"date" : ISODate("2012-04-25T00:00:00Z"),
+			"grade" : "A",
+			"score" : 7
+		},
+		{
+			"date" : ISODate("2011-11-03T00:00:00Z"),
+			"grade" : "A",
+			"score" : 12
+		}
+	],
+	"name" : "Lenny'S Clam Bar",
+	"restaurant_id" : "40367749"
+}
+
+
